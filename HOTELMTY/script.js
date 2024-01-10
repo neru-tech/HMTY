@@ -10,7 +10,21 @@ window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 }
-
+var mainSwiper = new Swiper(".swiper-container", {
+    spaceBetween: 10,
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loopAdditionalSlides: 4, // Esto asegura que después del último slide, el próximo sea el primero
+});
 var swiper = new Swiper(".home-slider", {
     grabCursor:true,
     loop:true,
@@ -31,7 +45,7 @@ var swiper = new Swiper(".room-slider", {
     loop:true,
     centeredSlides:true,
     autoplay: {
-        delay: 7500,
+        delay: 4000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -77,20 +91,7 @@ var swiper = new Swiper(".gallery-slider", {
     },
 });
 
-var swiper = new Swiper(".review-slider", {
-    spaceBetween: 10,
-    grabCursor:true,
-    loop:true,
-    centeredSlides:true,
-    autoplay: {
-        delay: 7500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+
 
 let accordions = document.querySelectorAll('.faqs .row .content .box');
 
